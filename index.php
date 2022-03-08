@@ -19,8 +19,6 @@ font-awesome/5.15.2/css/all.min.css"/>
   </head>
   <body>
 
-
-    <!-- SAIR -->
     <?php 
         if (isset($_GET['rota'])) {
           if ($_GET['rota'] != 'login-tela') { 
