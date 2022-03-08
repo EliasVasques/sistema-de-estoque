@@ -1,0 +1,9 @@
+.table, form {
+    width: 500px;
+    margin: auto;
+}
+
+/*
+form .form-control, form .btn {
+    display: inline-block;
+}*/
