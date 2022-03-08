@@ -15,20 +15,35 @@
 font-awesome/5.15.2/css/all.min.css"/>
 
 
-    <title>Hello, world!</title>
+    <title>Sistema Estoque</title>
   </head>
   <body>
 
-    <?php 
-      //include 'templates-html/login-tela.php'
-      include 'templates-html/navbar.php';
 
+    <!-- SAIR -->
+    <?php 
+        if (isset($_GET['rota'])) {
+          if ($_GET['rota'] != 'login-tela') { 
+            include 'templates-html/navbar.php';
+          }
+        } else if(empty($_GET)) {
+          include 'templates-html/navbar.php';
+        }
+    ?> 
+
+    <?php 
+      
       if (isset($_GET['rota'])) {
         switch($_GET['rota']) {
-          case 'pesquisar-produto':
-            include 'templates-html/pesquisar-produto.php';
+          case 'compra':
+            include 'templates-html/compra.php';
             break;
-
+          case 'cadastrar-produto':
+            include 'templates-html/cadastrar-produto.php';
+            break;
+          case 'login-tela':
+            include 'templates-html/login-tela.php';
+            break; 
         }
       }
       

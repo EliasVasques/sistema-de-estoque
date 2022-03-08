@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="style.css/login-tela.css">
 
 <h1>Entrar</h1>
-<form>
+<form action="index.php">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
