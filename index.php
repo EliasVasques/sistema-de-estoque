@@ -9,13 +9,32 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- meu css -->
-    <link rel="stylesheet" href="style.css/login-tela.css">
+
+    <!-- font awesome --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/
+font-awesome/5.15.2/css/all.min.css"/>
+
 
     <title>Hello, world!</title>
   </head>
   <body>
 
-    <?php include 'templates-html/login-tela.php' ?>
+    <?php 
+      //include 'templates-html/login-tela.php'
+      include 'templates-html/navbar.php';
+
+      if (isset($_GET['rota'])) {
+        switch($_GET['rota']) {
+          case 'pesquisar-produto':
+            include 'templates-html/pesquisar-produto.php';
+            break;
+
+        }
+      }
+      
+      
+      
+    ?>
 
     <!-- Optional JavaScript; choose one of the two! -->
 

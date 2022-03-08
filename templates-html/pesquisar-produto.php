@@ -1,3 +1,16 @@
+<!-- local: index.php -->
+<link rel="stylesheet" href="style.css/pesquisar-produto.css"> 
+
+<h2 class="titulo">Buscar Produto</h2>
+
+<div class="input-group rounded" id="buscar-produto">
+  <input type="search" class="form-control rounded" 
+  id="campo-pesquisa" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+  <span class="input-group-text border-0" id="search-addon">
+    <i class="fas fa-search"></i>
+  </span>
+</div>
+
 
 
 <table class="table table-striped">
@@ -24,15 +37,40 @@
       <td>R$2.88</td>
       <td>1112638321</td>
     </tr>
+    <tr>
+      <td>Soda</td>
+      <td>R$2.88</td>
+      <td>1112638321</td>
+    </tr>
+    <tr>
+      <td>Soda</td>
+      <td>R$2.88</td>
+      <td>1112638321</td>
+    </tr>
+    <tr>
+      <td>Soda</td>
+      <td>R$2.88</td>
+      <td>1112638321</td>
+    </tr>
+    <tr>
+      <td>Soda</td>
+      <td>R$2.88</td>
+      <td>1112638321</td>
+    </tr>
+    <tr>
+      <td>Soda</td>
+      <td>R$2.88</td>
+      <td>1112638321</td>
+    </tr>
+    <tr>
+      <td>Soda</td>
+      <td>R$2.88</td>
+      <td>1112638321</td>
+    </tr>
+    <tr>
+      <td>Soda</td>
+      <td>R$2.88</td>
+      <td>1112638321</td>
+    </tr>
   </tbody>
 </table>
-
-<nav aria-label="Page navigation example" class="paginacao">
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-  </ul>
-</nav>
