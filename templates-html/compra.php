@@ -1,6 +1,3 @@
-<!-- local: index.php -->
-<link rel="stylesheet" href="style.css/compra.css"> 
-
 <h2 class="titulo">Compra</h2>
 
 <div class="input-group rounded" id="buscar-produto">
