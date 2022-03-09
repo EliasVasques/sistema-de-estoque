@@ -1,7 +1,5 @@
-<!-- local: index.php -->
-<link rel="stylesheet" href="style.css/cadastrar-produto.css"> 
+<h2 class="titulo">Cadastrar Produto</h2>
 
-<h2>Cadastrar Produto</h2>
 <form>
   <div class="form-row">
     <div class="form-group col-md-12">
