@@ -13,7 +13,7 @@
           <a class="nav-link" href="index.php?rota=compra">Compra</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Entradas e Saídas</a>
+          <a class="nav-link" href="index.php?rota=entradas-e-saidas">Entradas e Saídas</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
