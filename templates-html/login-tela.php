@@ -1,7 +1,5 @@
-<!-- local: index.php -->
-<link rel="stylesheet" href="style.css/login-tela.css">
+<h2 class="titulo">Entrar</h2>
 
-<h1>Entrar</h1>
 <form action="index.php">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
