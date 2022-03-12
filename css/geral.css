@@ -24,3 +24,33 @@ form div, form button {
     border: 1px solid #ddd;
     border-radius: 10px;
 }
+
+/* footer */
+#footer {
+    text-align: center;
+    background-color: #ddd;
+    margin-top: 100px;
+}
+
+/* navbar */
+.nav-item:hover {
+    background-color: #eee;
+}
+.logo {
+    width: 50px;
+}
+
+/* home */
+.cards {
+    display: flex;
+    justify-content: center;
+}
+.cards a {
+    text-decoration: none;
+    text-align: center;
+}
+.card {
+    margin: 50px;
+    height: 250px;
+}
+
