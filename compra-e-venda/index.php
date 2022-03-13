@@ -2,16 +2,15 @@
 <?php require '../componentes/navbar.php' ?>
 <body>
 
-<h2 class="titulo">Comprar Produto</h2>
+<h2 class="titulo">Compra</h2>
 
 <div class="input-group rounded" id="buscar-produto">
   <input type="search" class="form-control rounded" 
-  id="campo-pesquisa" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+  id="campo-pesquisa" placeholder="Digite o código do produto" aria-label="Search" aria-describedby="search-addon" />
   <span class="input-group-text border-0" id="search-addon">
     <i class="fas fa-search"></i>
   </span>
 </div>
-
 
 
 <table class="table table-striped">
@@ -75,5 +74,12 @@
     </tr>
   </tbody>
 </table>
+
+<hr class="barra">
+
+<div class="total">
+  <div>Total</div>
+  <div>R$100</div>
+</div>
 
 <?php require '../componentes/footer.php' ?>

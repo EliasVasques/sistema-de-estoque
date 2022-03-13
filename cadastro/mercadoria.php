@@ -2,14 +2,20 @@
 <?php require '../componentes/navbar.php' ?>
 <body>
 
-<h2 class="titulo">Cadastrar Produto</h2>
+<h2 class="titulo">Cadastro de Mercadorias</h2>
 
 <form>
   <div class="form-row">
     <div class="form-group col-md-12">
-      <label for="nome">Nome</label>
-      <input type="text" class="form-control" id="nome">
+      <label for="marca">Tipo de Produto</label>
+      <select id="marca" class="form-control">
+        <option selected>-</option>
+        <option>opção 1</option>
+        <option>opção 2</option>
+        <option>opção 3</option>
+      </select>
     </div>
+    
     <div class="form-group col-md-12">
       <label for="marca">Marca</label>
       <select id="marca" class="form-control">
@@ -19,12 +25,13 @@
         <option>Cuca BGI</option>
       </select>
     </div>
+    
     <div class="form-group col-md-12">
-      <label for="preco">Preço</label>
+      <label for="preco">Valor</label>
       <input type="text" class="form-control" id="preco">
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Cadastrar</button>
+  <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 
 <?php require '../componentes/footer.php' ?>

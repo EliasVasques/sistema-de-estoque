@@ -5,7 +5,7 @@
 <h2>Sistema de Gerenciamento</h2>
 
 <div class="cards">
-    <a href="">
+    <a href="../cadastro/menu.php">
         <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="../img/cadastro.png" alt="Card image cap">
         <div class="card-body">
@@ -25,7 +25,7 @@
         </div>
     </a>
     
-    <a href="">
+    <a href="../busca-sistema/mercadoria.php">
         <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="../img/buscar.png" alt="Card image cap">
         <div class="card-body">
