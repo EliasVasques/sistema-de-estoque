@@ -2,9 +2,40 @@
 <?php require '../componentes/navbar.php' ?>
 <body>
 
-<h2 class="titulo">Cadastro de Fornecedor</h2>
-<form>
-  
+<h2>Busca</h2>
+
+<div class="cards">
+    <a href="mercadoria.php">
+        <div class="card desativo" style="width: 18rem;">
+        <img class="card-img-top" src="../img/mercadoria.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Mercadorias</h5>
+        </div>
+        </div>
+    </a>
+
+    <a href="#form-cadastro">
+        <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="../img/fornecedor.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Fornecedores</h5>
+        </div>
+        </div>
+    </a>
+    
+    <a href="cliente.php">
+        <div class="card desativo" style="width: 18rem;">
+        <img class="card-img-top" src="../img/cliente.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Clientes</h5>
+        </div>
+        </div>
+    </a>
+</div>
+
+<h2>Fornecedor</h2>
+
+<form id="form-cadastro">
     <div class="form-group col-md-12">
       <label for="nome">Nome Fantasia</label>
       <input type="text" class="form-control" id="nome">

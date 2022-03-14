@@ -2,9 +2,9 @@
 <?php require '../componentes/navbar.php' ?>
 <body>
 
-<h2 class="titulo">Compra</h2>
+<h2>Compra</h2>
 
-<div class="input-group rounded" id="buscar-produto">
+<div class="input-group rounded" id="buscar-mercadoria">
   <input type="search" class="form-control rounded" 
   id="campo-pesquisa" placeholder="Digite o código do produto" aria-label="Search" aria-describedby="search-addon" />
   <span class="input-group-text border-0" id="search-addon">

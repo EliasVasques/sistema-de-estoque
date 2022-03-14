@@ -3,7 +3,7 @@ h2 {
     margin: 50px;
 }
 
-form, .table, #buscar-produto {
+form, .table, #buscar-mercadoria {
     width: 500px;
     margin: auto;
 }
@@ -13,7 +13,7 @@ form div, form button {
 }
 
 /* compra  */
-#buscar-produto {
+#buscar-mercadoria {
     margin-bottom: 10px;
 }
 
@@ -75,4 +75,15 @@ form div, form button {
    text-align: center;
    font-size: 20px;
 
+}
+
+/* busca */
+.desativo {
+    background-color: #ccc;
+}
+.desativo img {
+    filter: brightness(40%);
+} 
+.desativo h5 {
+    color: #0d6dfd80;
 }

@@ -2,7 +2,7 @@
 <?php require '../componentes/head.php' ?>
 <body>
 
-<h2 class="titulo">Entrar</h2>
+<h2>Entrar</h2>
 
 <form action="../home" id="login-form">
   <div class="mb-3">

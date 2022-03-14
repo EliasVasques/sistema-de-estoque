@@ -5,7 +5,7 @@
 <h2>Sistema de Gerenciamento</h2>
 
 <div class="cards">
-    <a href="../cadastro/menu.php">
+    <a href="../cadastro/mercadoria.php">
         <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="../img/cadastro.png" alt="Card image cap">
         <div class="card-body">
