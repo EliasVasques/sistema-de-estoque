@@ -2,6 +2,10 @@
 <?php require '../componentes/navbar.php' ?>
 <body>
 
+<a href="../home">
+  <img src="../img/voltar.png" class="voltar" alt="">
+</a>
+
 <h2>Compra</h2>
 
 <div class="input-group rounded" id="buscar-mercadoria">

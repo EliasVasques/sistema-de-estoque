@@ -1,3 +1,7 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
 h2 {
     text-align: center;
     margin: 50px;
@@ -26,10 +30,16 @@ form div, form button {
 }
 
 /* footer */
-#footer {
-    text-align: center;
-    background-color: #ddd;
-    margin-top: 100px;
+footer div {
+    background-color: #eee;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 50px;
+
+    height: 150px;
 }
 
 /* navbar */
@@ -44,6 +54,7 @@ form div, form button {
 .cards {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .cards a {
     text-decoration: none;
@@ -86,4 +97,32 @@ form div, form button {
 } 
 .desativo h5 {
     color: #0d6dfd80;
+}
+
+/* voltar */
+.voltar {
+    width: 50px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+/* responsividade*/ 
+@media(max-width: 650px) {
+    .barra {
+        width: 100%;
+    }
+    .voltar {
+        margin-left: 0;
+    }
+}
+@media(max-width: 500px) {
+    form, .table, #buscar-mercadoria {
+        width: 100%;
+    }
+    .card {
+        width: 100%;
+        margin: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }

@@ -2,6 +2,10 @@
 <?php require '../componentes/navbar.php' ?>
 <body>
 
+<a href="../home">
+  <img src="../img/voltar.png" class="voltar" alt="">
+</a>
+
 <h2>Busca</h2>
 
 <div class="cards">
