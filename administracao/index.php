@@ -51,5 +51,13 @@
   </tbody>
 </table>
 
+<h2>Vendas</h2>
+
+<div id="grafico">
+  <canvas id="myChart"></canvas>
+</div>
+
+<script src="grafico-saida-produtos.js"></script>
+
 <?php require '../componentes/footer.php' ?>
   

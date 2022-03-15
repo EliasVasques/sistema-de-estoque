@@ -18,8 +18,8 @@
         </div>
     </a>
 
-    <a href="fornecedor.php">
-        <div class="card desativo" style="width: 18rem;">
+    <a href="fornecedor.php#form-cadastro">
+        <div class="card naoEstaClicado" style="width: 18rem;">
         <img class="card-img-top" src="../img/fornecedor.jpg" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">Fornecedores</h5>
@@ -27,8 +27,8 @@
         </div>
     </a>
     
-    <a href="cliente.php">
-        <div class="card desativo" style="width: 18rem;">
+    <a href="cliente.php#form-cadastro">
+        <div class="card naoEstaClicado" style="width: 18rem;">
         <img class="card-img-top" src="../img/cliente.jpg" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">Clientes</h5>
@@ -50,7 +50,9 @@
         <option>opção 3</option>
       </select>
     </div>
-    
+  </div>
+  
+  <div class="form-row">
     <div class="form-group col-md-12">
       <label for="marca">Marca</label>
       <select id="marca" class="form-control">
@@ -60,12 +62,22 @@
         <option>Cuca BGI</option>
       </select>
     </div>
-    
+    </div>
+  
+  <div class="form-row">  
     <div class="form-group col-md-12">
       <label for="preco">Valor</label>
       <input type="text" class="form-control" id="preco">
     </div>
   </div>
+
+  <div class="form-row">  
+    <div class="form-group col-md-12">
+      <label for="quantidade">Quantidade</label>
+      <input type="text" class="form-control" id="quantidade">
+    </div>
+  </div>
+
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 

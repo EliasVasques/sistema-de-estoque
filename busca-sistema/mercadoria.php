@@ -18,8 +18,8 @@
         </div>
     </a>
 
-    <a href="fornecedor.php">
-        <div class="card desativo" style="width: 18rem;">
+    <a href="fornecedor.php#buscar-mercadoria">
+        <div class="card naoEstaClicado" style="width: 18rem;">
         <img class="card-img-top" src="../img/fornecedor.jpg" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">Fornecedores</h5>
@@ -27,8 +27,8 @@
         </div>
     </a>
     
-    <a href="cliente.php">
-        <div class="card desativo" style="width: 18rem;">
+    <a href="cliente.php#buscar-mercadoria">
+        <div class="card naoEstaClicado" style="width: 18rem;">
         <img class="card-img-top" src="../img/cliente.jpg" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">Clientes</h5>
@@ -53,6 +53,7 @@
       <th scope="col">Produto</th>
       <th scope="col">Preço</th>
       <th scope="col">Código</th>
+      <th scope="col">Quantidade</th>
     </tr>
   </thead>
   <tbody>
@@ -60,51 +61,61 @@
       <td>Soda</td>
       <td>R$2.88</td>
       <td>1112638321</td>
+      <td>500</td>
     </tr>
     <tr>
       <td>Soda</td>
       <td>R$2.88</td>
       <td>1112638321</td>
+      <td>500</td>
     </tr>
     <tr>
       <td>Soda</td>
       <td>R$2.88</td>
       <td>1112638321</td>
+      <td>500</td>
     </tr>
     <tr>
       <td>Soda</td>
       <td>R$2.88</td>
       <td>1112638321</td>
+      <td>500</td>
     </tr>
     <tr>
       <td>Soda</td>
       <td>R$2.88</td>
       <td>1112638321</td>
+      <td>500</td>
     </tr>
     <tr>
       <td>Soda</td>
       <td>R$2.88</td>
       <td>1112638321</td>
+      <td>500</td>
     </tr>
     <tr>
       <td>Soda</td>
       <td>R$2.88</td>
       <td>1112638321</td>
+      <td>500</td>
     </tr>
     <tr>
       <td>Soda</td>
       <td>R$2.88</td>
       <td>1112638321</td>
+      <td>500</td>
     </tr>
     <tr>
       <td>Soda</td>
       <td>R$2.88</td>
       <td>1112638321</td>
+      <td>500</td>
     </tr>
     <tr>
       <td>Soda</td>
       <td>R$2.88</td>
       <td>1112638321</td>
+      <td>500</td>
     </tr>
   </tbody>
 </table>

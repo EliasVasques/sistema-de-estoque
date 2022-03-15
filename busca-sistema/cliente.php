@@ -9,8 +9,8 @@
 <h2>Busca</h2>
 
 <div class="cards">
-    <a href="mercadoria.php">
-        <div class="card desativo" style="width: 18rem;">
+    <a href="mercadoria.php#buscar-mercadoria">
+        <div class="card naoEstaClicado" style="width: 18rem;">
         <img class="card-img-top" src="../img/mercadoria.jpg" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">Mercadorias</h5>
@@ -18,8 +18,8 @@
         </div>
     </a>
 
-    <a href="fornecedor.php">
-        <div class="card desativo" style="width: 18rem;">
+    <a href="fornecedor.php#buscar-mercadoria">
+        <div class="card naoEstaClicado" style="width: 18rem;">
         <img class="card-img-top" src="../img/fornecedor.jpg" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">Fornecedores</h5>

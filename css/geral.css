@@ -1,5 +1,8 @@
 body {
+    box-sizing: border-box;
+    margin: 0;
     font-family: 'Open Sans', sans-serif;
+    
 }
 
 h2 {
@@ -88,14 +91,14 @@ footer div {
 
 }
 
-/* busca */
-.desativo {
+/* naoEstaClicado */
+.naoEstaClicado {
     background-color: #ccc;
 }
-.desativo img {
+.naoEstaClicado img {
     filter: brightness(40%);
 } 
-.desativo h5 {
+.naoEstaClicado h5 {
     color: #0d6dfd80;
 }
 
@@ -106,6 +109,39 @@ footer div {
     margin-top: 20px;
 }
 
+/* gráfico */
+#grafico {
+    width: 500px;
+    margin: auto;
+}
+
+/* desenvolvedores */
+.desenvolvedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+.desenvolvedor-foto {
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    margin-right: 10px;
+}
+.desenvolvedor p {
+    width: 400px;
+    text-align: center;
+}
+.icone {
+    width: 80px;
+}
+.redes-sociais {
+    display: flex;
+    justify-content: space-around;
+}
+
 /* responsividade*/ 
 @media(max-width: 650px) {
     .barra {
@@ -113,6 +149,22 @@ footer div {
     }
     .voltar {
         margin-left: 0;
+    }
+    #grafico {
+        width: 100%;
+    }
+    .desenvolvedor-foto {
+        width: 150px;
+        height: 150px;
+        border-radius: 75px;
+        margin: 0;
+    }
+    .desenvolvedor-nome {
+        text-align: center;
+    }
+    .desenvolvedor p {
+        width: 100%;
+        text-align: center;
     }
 }
 @media(max-width: 500px) {

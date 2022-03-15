@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="../home">
       <img src="../img/logo.jpg" alt="" class="logo">
       Organize
     </a>
@@ -9,17 +9,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
+
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../home">Home</a>
+          <a class="nav-link" href="../administracao">Administração</a>
         </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Adm
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="../adm/entradas-e-saidas.php">Entradas e Saídas</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="../desenvolvedores">Desenvolvedores</a>
         </li>
 
         <li class="nav-item">
