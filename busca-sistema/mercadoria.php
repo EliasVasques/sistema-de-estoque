@@ -1,43 +1,17 @@
 <?php require '../componentes/head.php' ?>
-<?php require '../componentes/navbar.php' ?>
-<body>
 
-<a href="../home">
-  <img src="../img/voltar.png" class="voltar" alt="">
-</a>
+<body>
+<?php require '../componentes/navbar.php' ?>
 
 <h2>Busca</h2>
 
-<div class="cards">
-    <a href="#buscar-mercadoria">
-        <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="../img/mercadoria.jpg" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Mercadorias</h5>
-        </div>
-        </div>
-    </a>
+<?php require '../componentes/menu.php' ?>
+<script>
+  document.querySelector('#cliente .card').classList.add("naoEstaClicado");
+  document.querySelector('#fornecedor .card').classList.add("naoEstaClicado");
+</script>
 
-    <a href="fornecedor.php#buscar-mercadoria">
-        <div class="card naoEstaClicado" style="width: 18rem;">
-        <img class="card-img-top" src="../img/fornecedor.jpg" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Fornecedores</h5>
-        </div>
-        </div>
-    </a>
-    
-    <a href="cliente.php#buscar-mercadoria">
-        <div class="card naoEstaClicado" style="width: 18rem;">
-        <img class="card-img-top" src="../img/cliente.jpg" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Clientes</h5>
-        </div>
-        </div>
-    </a>
-</div>
-
-<h2>Mercadorias</h2>
+<h2 id="titulo">Mercadorias</h2>
 
 <div class="input-group rounded" id="buscar-mercadoria">
   <input type="search" class="form-control rounded" 

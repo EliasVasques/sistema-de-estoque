@@ -1,10 +1,7 @@
 <?php require '../componentes/head.php' ?>
-<?php require '../componentes/navbar.php' ?>
-<body>
 
-<a href="../home">
-  <img src="../img/voltar.png" class="voltar" alt="">
-</a>
+<body>
+<?php require '../componentes/navbar.php' ?>
 
 <h2 class="titulo">Entradas e saídas</h2>
 

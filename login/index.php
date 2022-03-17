@@ -1,5 +1,5 @@
-
 <?php require '../componentes/head.php' ?>
+
 <body>
 
 <h2>Entrar</h2>
