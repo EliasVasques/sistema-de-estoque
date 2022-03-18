@@ -10,7 +10,7 @@ h2 {
     margin: 50px;
 }
 
-form, .table, #buscar-mercadoria {
+form, .table, #buscar-mercadoria, #grafico{
     width: 500px;
     margin: auto;
 }
@@ -34,7 +34,9 @@ form div, form button {
 
 /* footer */
 footer div {
-    background-color: #eee;
+    background-color: #212529;
+    color: #fff;
+
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -46,8 +48,11 @@ footer div {
 }
 
 /* navbar */
-.nav-item:hover {
-    background-color: #eee;
+.navbar {
+    background-color: #000;
+}
+.nav-item:hover, .clicado {
+    background-color: #b9bec413;
 }
 .logo {
     width: 50px;
@@ -107,12 +112,6 @@ footer div {
     width: 50px;
     margin-left: 50px;
     margin-top: 20px;
-}
-
-/* gráfico */
-#grafico {
-    width: 500px;
-    margin: auto;
 }
 
 /* desenvolvedores */

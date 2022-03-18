@@ -3,6 +3,11 @@
 <body>
 <?php require '../componentes/navbar.php' ?>
 
+<!-- navbar link -->
+<script>
+  document.querySelector('.navbar-home').classList.add("clicado");
+</script>
+
 <h2>Sistema de Gerenciamento</h2>
 
 <div class="cards">

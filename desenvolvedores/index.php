@@ -1,7 +1,14 @@
-<?php require '../componentes/head.php' ?>
+<?php require '../componentes/head.php'; ?>
 
-<body>
-<?php require '../componentes/navbar.php' ?>
+<?php 
+  require '../componentes/navbar.php';
+  require '../componentes/botao-voltar-home.php';
+?>
+
+<!-- navbar link -->
+<script>
+  document.querySelector('.navbar-desenvolvedores').classList.add("clicado");
+</script>
 
 <h2>Desenvolvedores</h2>
 
