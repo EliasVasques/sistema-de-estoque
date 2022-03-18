@@ -1,8 +1,11 @@
-<?php require '../componentes/head.php' ?>
+<?php 
+  require '../componentes/head.php';
+  require '../componentes/navbar-login.php';
+?>
 
 <body>
 
-<h2>Entrar</h2>
+<h2>Login</h2>
 
 <form action="../home" id="login-form">
   <div class="mb-3">
@@ -21,4 +24,4 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
-<?php //require '../componentes/footer.php' ?>
+<?php require '../componentes/footer.php'; ?>
