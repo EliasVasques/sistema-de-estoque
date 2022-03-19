@@ -57,11 +57,6 @@ footer div {
 }
 
 /* navbar */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
 .nav-item:hover, .clicado {
     background-color: #b9bec413;
 }
