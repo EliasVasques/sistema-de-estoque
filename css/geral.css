@@ -25,7 +25,8 @@ form div, form button, #buscar-mercadoria {
     font-family: 'Indie Flower', cursive;  
 }
 .nome-empresa-titulo {
-    margin: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .nome-empresa-navbar {
     font-size: 30px;
@@ -59,9 +60,6 @@ footer div {
 /* navbar */
 .nav-item:hover, .clicado {
     background-color: #b9bec413;
-}
-.logo {
-    width: 50px;
 }
 
 /* home */
@@ -165,6 +163,9 @@ footer div {
     }
     .desenvolvedor-nome {
         text-align: center;
+    }
+    #login-form {
+        border-radius: 0;
     }
 }
 
