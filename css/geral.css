@@ -53,11 +53,15 @@ footer div {
     align-items: center;
 
     margin-top: 50px;
-
-    height: 150px;
+    height: 150px;      
 }
 
 /* navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
 .nav-item:hover, .clicado {
     background-color: #b9bec413;
 }
