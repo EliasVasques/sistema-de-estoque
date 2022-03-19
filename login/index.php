@@ -1,13 +1,12 @@
 <?php 
   require '../componentes/head.php';
-  require '../componentes/navbar-login.php';
 ?>
 
-<body>
+<body id="login">
 
-<h2>Login</h2>
-
+<h1 class="nome-empresa nome-empresa-titulo">Organize</h1>
 <form action="../home" id="login-form">
+  <h2>Login</h2>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -24,4 +23,5 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
-<?php require '../componentes/footer.php'; ?>
+
+

@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="../home">
       <img src="../img/logo.png" alt="" class="logo">
-      Organize
+      <span class="nome-empresa nome-empresa-navbar">Organize</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

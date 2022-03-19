@@ -2,34 +2,43 @@ body {
     box-sizing: border-box;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    
 }
 
 h2 {
     text-align: center;
-    margin: 50px;
+    margin: 30px;
 }
 
-form, .table, #buscar-mercadoria, #grafico{
+form, .table, #buscar-mercadoria, #grafico {
     width: 500px;
     margin: auto;
 }
 
-form div, form button {
+form div, form button, #buscar-mercadoria {
     margin-top: 20px;
 }
 
-/* compra  */
-#buscar-mercadoria {
-    margin-bottom: 10px;
-}
-
 /* tela login */
+.nome-empresa {
+    color: #fff;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;  
+}
+.nome-empresa-titulo {
+    margin: 50px;
+}
+.nome-empresa-navbar {
+    font-size: 30px;
+}
 #login-form {
     width: 400px;
     padding: 25px;
-    border: 1px solid #ddd;
     border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+}
+#login {
+    background-color: #212529;
 }
 
 /* footer */
@@ -54,17 +63,6 @@ footer div {
 .logo {
     width: 50px;
 }
-.navbar-login {
-    display: flex;
-    justify-content: center;
-    color: #fff;
-    font-size: 20px;
-    background-color: #212529;
-}
-.navbar-login div {
-    margin: 10px;
-}
-
 
 /* home */
 .cards {
@@ -86,7 +84,6 @@ footer div {
     width: 650px;
     margin: auto;
 }
-
 .total {
     display: flex;
     justify-content: center;
@@ -101,7 +98,6 @@ footer div {
 
    text-align: center;
    font-size: 20px;
-
 }
 
 /* naoEstaClicado */
@@ -151,14 +147,15 @@ footer div {
 
 /* responsividade*/ 
 @media(max-width: 650px) {
-    .barra {
-        width: 100%;
-    }
     .voltar {
         margin-left: 0;
     }
-    #grafico, #login-form{
+    #grafico, form, .barra, .desenvolvedor p, .table, #buscar-mercadoria, .card  {
         width: 100%;
+    }
+    .card {
+        margin: 0;
+        margin-top: 10px;
     }
     .desenvolvedor-foto {
         width: 150px;
@@ -169,19 +166,5 @@ footer div {
     .desenvolvedor-nome {
         text-align: center;
     }
-    .desenvolvedor p {
-        width: 100%;
-        text-align: center;
-    }
 }
-@media(max-width: 500px) {
-    form, .table, #buscar-mercadoria {
-        width: 100%;
-    }
-    .card {
-        width: 100%;
-        margin: 0;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-}
+
