@@ -147,7 +147,7 @@ footer div {
     .voltar {
         margin-left: 0;
     }
-    #grafico, form, .barra, .desenvolvedor p, .table, #buscar-mercadoria, .card  {
+    #grafico, form, .barra, .desenvolvedor p, .table, #buscar-mercadoria, .card, #login-form  {
         width: 100%;
     }
     .card {
