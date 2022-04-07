@@ -15,7 +15,6 @@
   </span>
 </div>
 
-
 <table class="table table-striped">
   <thead>
     <tr>
@@ -25,53 +24,28 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr onclick="addCompra('Soda', 2.88, '1112638321')">
       <td>Soda</td>
       <td>R$2.88</td>
       <td>1112638321</td>
     </tr>
-    <tr>
-    <td>Soda</td>
+    <tr onclick="addCompra('Refri', 2.88, '1112638321')">
+      <td>Refri</td>
       <td>R$2.88</td>
       <td>1112638321</td>
     </tr>
-    <tr>
-      <td>Soda</td>
+    <tr onclick="addCompra('Suquinho', 2.88, '1112638321')">
+      <td>Suquinho</td>
       <td>R$2.88</td>
       <td>1112638321</td>
     </tr>
-    <tr>
-      <td>Soda</td>
+    <tr onclick="addCompra('Chá', 2.88, '1112638321')"> 
+      <td>Chá</td>
       <td>R$2.88</td>
       <td>1112638321</td>
     </tr>
-    <tr>
-      <td>Soda</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-    </tr>
-    <tr>
-      <td>Soda</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-    </tr>
-    <tr>
-      <td>Soda</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-    </tr>
-    <tr>
-      <td>Soda</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-    </tr>
-    <tr>
-      <td>Soda</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-    </tr>
-    <tr>
-      <td>Soda</td>
+    <tr onclick="addCompra('Cerveja Amanteigada', 2.88, '1112638321')">
+      <td>Cerveja Amanteigada</td>
       <td>R$2.88</td>
       <td>1112638321</td>
     </tr>
@@ -80,9 +54,21 @@
 
 <hr class="barra">
 
+<div id="itens">
+  <h3>Itens</h2>
+  <table class="table table-striped">
+  <tbody>
+  </tbody>
+  </table>
+</div>
+
+<hr class="barra">
+
 <div class="total">
   <div>Total</div>
-  <div>R$100</div>
+  <div class="valor">0</div>
 </div>
+
+<script src="compra.js"></script>
 
 <?php require '../componentes/footer.php' ?>

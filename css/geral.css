@@ -80,6 +80,7 @@ footer div {
 .barra {
     width: 650px;
     margin: auto;
+    margin-top: 20px;
 }
 .total {
     display: flex;
@@ -95,6 +96,10 @@ footer div {
 
    text-align: center;
    font-size: 20px;
+}
+#itens h3 {
+    text-align: center;
+    margin-top: 20px;
 }
 
 /* naoEstaClicado */
