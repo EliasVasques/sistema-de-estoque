@@ -12,6 +12,7 @@
 
 <div class="cards">
     <a href="../cadastro/mercadoria.php">
+        <!-- <h2>sla<eewe/h2> -->
         <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="../img/cadastro.png" alt="Card image cap">
         <div class="card-body">
