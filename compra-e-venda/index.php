@@ -69,7 +69,7 @@
   <div class="valor">0</div>
 </div>
 
-<div id="finalizarCompra" onclick="itensRemovidoBancoMensagem()">Finalizar Compra</div> 
+<div id="finalizarCompra" onclick="mensagemRemovidoBancoComSucesso()">Finalizar Compra</div> 
 <!-- fazer que ao clicar remove do banco os ítens(usa php), passando removerBanco array como parametro, o array contem o id dos itens -->
 
 <script src="compra.js"></script>

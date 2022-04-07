@@ -16,11 +16,11 @@ function addCompra(nome, preco, codigo) {
     removerBanco.push(codigo);
 }
 
-function itensRemovidoBancoMensagem() {
+function mensagemRemovidoBancoComSucesso() {
     
     swal({
         title: "Itens removidos do banco!",
-        text: "Você ganhou " + total + " reais.",
+        text: `Você ganhou ${total} reais.`,
         icon: "success",
     })
     .then(() => {
