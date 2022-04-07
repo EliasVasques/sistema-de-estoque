@@ -1,4 +1,7 @@
 
+let removerBanco = [];
+let total = 0;
+
 function addCompra(nome, preco, codigo) {
     let itens = document.querySelector("#itens tbody");
     itens.innerHTML += 
@@ -8,7 +11,22 @@ function addCompra(nome, preco, codigo) {
         <td>${codigo}</td>
     </tr>`;
 
-    let valor = document.querySelector(".total .valor").textContent; 
-    document.querySelector(".total .valor").innerHTML = (Number(valor) + preco).toFixed(2);
+    total += preco;
+    document.querySelector(".total .valor").innerHTML = total.toFixed(2);
+    removerBanco.push(codigo);
+}
+
+function itensRemovidoBancoMensagem() {
+    
+    swal({
+        title: "Itens removidos do banco!",
+        text: "Você ganhou " + total + " reais.",
+        icon: "success",
+    })
+    .then(() => {
+        if (confirm) {
+            window.location.href = "../home/index.php";
+        }
+    });
 
 }
