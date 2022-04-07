@@ -20,7 +20,7 @@ function mensagemRemovidoBancoComSucesso() {
     
     swal({
         title: "Itens removidos do banco!",
-        text: `Você ganhou ${total} reais.`,
+        text: `Você ganhou ${total.toFixed(2)} reais.`,
         icon: "success",
     })
     .then(() => {
