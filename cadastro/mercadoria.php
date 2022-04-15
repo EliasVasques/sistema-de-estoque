@@ -15,15 +15,15 @@
 
 <h2 id="titulo">Mercadorias</h2>
 
-<form id="form-cadastro">
+<form id="form-cadastro" method="POST" action="salvarMercadoria.php">
   <div class="form-row">
     <div class="form-group col-md-12">
-      <label for="marca">Tipo de Produto</label>
-      <select id="marca" class="form-control">
+      <label for="tipoProduto">Tipo de Produto</label>
+      <select id="tipoProduto" name="tipoProduto" class="form-control">
         <option selected>-</option>
-        <option>opção 1</option>
-        <option>opção 2</option>
-        <option>opção 3</option>
+        <option value="Cerveja">Cerveja</option>
+        <option value="Vodka">Vodka</option>
+        <option value="Cachaça">Cachaça</option>
       </select>
     </div>
   </div>
@@ -31,7 +31,7 @@
   <div class="form-row">
     <div class="form-group col-md-12">
       <label for="marca">Marca</label>
-      <select id="marca" class="form-control">
+      <select id="marca" name="marca" class="form-control">
         <option selected>-</option>
         <option>Skol</option>
         <option>Calsberg Group</option>
@@ -42,15 +42,22 @@
   
   <div class="form-row">  
     <div class="form-group col-md-12">
-      <label for="preco">Valor</label>
-      <input type="text" class="form-control" id="preco">
+      <label for="valor">Valor</label>
+      <input type="text" class="form-control" name ="valor" id="valor">
     </div>
   </div>
 
   <div class="form-row">  
     <div class="form-group col-md-12">
       <label for="quantidade">Quantidade</label>
-      <input type="text" class="form-control" id="quantidade">
+      <input type="text" name="quantidade" class="form-control" id="quantidade">
+    </div>
+  </div>
+
+  <div class="form-row">  
+    <div class="form-group col-md-12">
+      <label for="codigoFornecedor">Código do fornecedor</label>
+      <input type="text" name="codigoFornecedor"  id="codigoFornecedor" class="form-control">
     </div>
   </div>
 

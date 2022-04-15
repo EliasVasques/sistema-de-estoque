@@ -4,6 +4,10 @@ body  {
     font-family: 'Open Sans', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 h2 {
     text-align: center;
     margin: 30px;
@@ -77,6 +81,10 @@ footer div {
 }
 
 /* compra e venda */
+.remover{
+    width: 30px;
+    float: right;
+}
 .barra {
     width: 650px;
     margin: auto;
