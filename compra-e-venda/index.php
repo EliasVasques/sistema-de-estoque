@@ -9,15 +9,54 @@
   //$removerBanco = [];
 ?>
 
+<!--
+<table class="table table-striped">
+  <thead>
+    <tr> 
+      <th scope="col">Produto</th>
+      <th scope="col">Preço</th>
+      <th scope="col">Código</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Coca</td>
+      <td>R$2.99</td>
+      <td>999999999999</td>
+      <th scope="row">
+          <img class="remover" src="../img/delete.jpg" alt="">
+      </th>
+    </tr>
+    <tr>
+      <td>Coca</td>
+      <td>R$2.99</td>
+      <td>999999999999</td>
+      <th scope="row">
+          <img class="remover" src="../img/delete.jpg" alt="">
+      </th>
+    </tr>
+    <tr>
+      <td>Coca</td>
+      <td>R$2.99</td>
+      <td>999999999999</td>
+      <th scope="row">
+          <img class="remover" src="../img/delete.jpg" alt="">
+      </th>
+    </tr>
+  </tbody>
+</table>
+-->
+
 <h2>Compra</h2>
 
-<form method="POST" >
-    <input type="search" class="form-control rounded" 
-    id="campo-pesquisa" name="busca" placeholder="Digite o código do produto" aria-label="Search" aria-describedby="search-addon" />
-
-    <button class="input-group-text border-0" id="search-addon">
-      <i class="fas fa-search"></i>
-    </button>
+<form class="buscar-produto"  method="POST">
+  <div>
+    <input type="search" class="form-control" />
+  </div>
+  <button type="button" class="btn btn-dark">
+    <i class="fas fa-search"></i>
+  </button>
 </form>
 
 <table class="table table-striped busca">
@@ -54,8 +93,16 @@
 <hr class="barra">
 
 <div id="itens">
-  <h3>Itens</h2>
+  <h3>Seu carrinho</h2>
   <table class="table table-striped">
+  <thead>
+    <tr> 
+      <th scope="col">Produto</th>
+      <th scope="col">Preço</th>
+      <th scope="col">Código</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
   <tbody>
   </tbody>
   </table>

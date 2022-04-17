@@ -83,7 +83,7 @@ footer div {
 /* compra e venda */
 .remover{
     width: 30px;
-    float: right;
+    cursor: pointer;
 }
 .barra {
     width: 650px;
@@ -126,8 +126,21 @@ footer div {
     margin: auto;
     margin-top: 20px;
 }
-#finalizarCompra {
-
+.buscar-produto {
+    display: flex;
+    justify-content: center;
+}
+.buscar-produto div input {
+    width: 500px;
+}
+.produtos {
+    margin: auto;
+}
+.produtos tr {
+    margin-top: 5px;
+}
+.produtos tr td {
+    margin-left: 20px;
 }
 
 /* naoEstaClicado */
@@ -180,7 +193,7 @@ footer div {
     .voltar {
         margin-left: 0;
     }
-    #grafico, form, .barra, .desenvolvedor p, .table, #buscar-mercadoria, .card, #login-form  {
+    #grafico, form, .barra, .desenvolvedor p, .table, #buscar-mercadoria, .card, #login-form, .buscar-produto div input {
         width: 100%;
     }
     .card {

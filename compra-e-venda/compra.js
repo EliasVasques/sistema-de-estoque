@@ -11,8 +11,10 @@ function addCompra(nome, preco, codigo) {
         <td>${nome}</td>
         <td>${preco}</td>
         <td>${codigo}</td>
-    </tr>
-    <img class="remover" src="../img/remover.png" alt="">`;
+        <th scope="row">
+          <img class="remover" src="../img/delete.jpg" alt="">
+        </th>
+    </tr>`;
 
     total += preco;
     document.querySelector(".total .valor").innerHTML = total.toFixed(2);
