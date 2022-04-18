@@ -6,7 +6,7 @@
 ?>
 
 
-<h2>Busca</h2>
+<h1> <i>Cadastro</i> </h1>
 
 <!-- menu -->
 <?php require '../componentes/menu.php' ?>

@@ -4,14 +4,27 @@ body  {
     font-family: 'Open Sans', sans-serif;
 }
 
-a {
-    text-decoration: none;
+h1 {
+    margin: 50px;
+    text-align: center;
+    color: #212529;
 }
 
 h2 {
     text-align: center;
     margin: 30px;
 }
+
+h3 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
 
 form, .table, #buscar-mercadoria, #grafico {
     width: 500px;
@@ -100,10 +113,6 @@ footer div {
 
    text-align: center;
    font-size: 20px;
-}
-#itens h3 {
-    text-align: center;
-    margin-top: 20px;
 }
 .busca tr {
     cursor: pointer;

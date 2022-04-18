@@ -6,7 +6,7 @@
 ?>
 
 
-<h2>Busca</h2>
+<h1> <i>Busca</i> </h1>
 
 <?php require '../componentes/menu.php' ?>
 <script>

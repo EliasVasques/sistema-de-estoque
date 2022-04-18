@@ -9,8 +9,9 @@
   //$removerBanco = [];
 ?>
 
-<h2>Compra</h2>
+<h1> <i>Compra</i> </h2>
 
+<h3>Pesquise, temos de tudo!</h3>
 <form class="buscar-produto"  method="GET">
   <div>
     <input type="search" name="busca" class="form-control" />
