@@ -1,12 +1,13 @@
 <?php require '../componentes/head.php' ?>
-
+ var_dump($_GET);
 <body>
-<?php
+<?php 
 if (!empty($_GET)){
     include "../banco/config.php";
     $codigoBarra = $_GET['codigoBarra'];
+    $quantidade = $_GET['quantidade'];
 
-    /* ADD CARRINHO */
+    // ADD CARRINHO 
     $sql = "SELECT * FROM cadastro_mercadoria WHERE codigoBarra = $codigoBarra";
     $query = $mysqli->query($sql);
     $dados = $query->fetch_array();
@@ -21,12 +22,12 @@ if (!empty($_GET)){
     values ('$valor', '$tipoProduto', '$marca', '$quantidade', '$codigoFornecedor', '$codigoBarra')";
     $query = $mysqli->query($sql);
 
-    /* REMOVER CADASTRO_MERCADORIA*/
+    // REMOVER CADASTRO_MERCADORIA
     $sql = "DELETE FROM cadastro_mercadoria WHERE codigoBarra = $codigoBarra";
     $query = $mysqli->query($sql);
 
     header('Location: '.'index.php');
 
 
-} ?>
+} */ ?>
 </body>

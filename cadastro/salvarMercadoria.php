@@ -1,6 +1,7 @@
 <?php require '../componentes/head.php' ?>
 
 <body>
+
 <?php
 if (!empty($_POST)){
     include "../banco/config.php";

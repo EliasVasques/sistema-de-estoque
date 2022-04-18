@@ -27,9 +27,10 @@
 <table class="table table-striped busca">
   <thead>
     <tr>
+      <th scope="col">Código</th>  
       <th scope="col">Produto</th>
       <th scope="col">Preço</th>
-      <th scope="col">Código</th>
+      <th scope="col">Quantidade</th>
       <th></th>
     </tr>
   </thead>
@@ -42,22 +43,31 @@
     if (!empty($_GET)){
       $busca = $_GET['busca'];
       $sql = "SELECT * FROM cadastro_mercadoria WHERE codigoBarra = $busca";
-    } else {
-      $sql = "SELECT * FROM cadastro_mercadoria";
-    }
-    $query = $mysqli->query($sql);
+      $query = $mysqli->query($sql);
 
-    while ($dados = $query->fetch_array()){ ?>
-        <tr>
-          <td><?php echo $dados['marca']?></td>
-          <td>R$<?php echo $dados['valor']?></td>
-          <td><?php echo $dados['codigoBarra']?></td>
-          <td>
-            <a href="addCarrinho.php?codigoBarra=<?php echo $dados['codigoBarra'] ?>">comprar</a> 
-          </td>
-        </tr>
-      
-    <?php } ?>
+      while ($dados = $query->fetch_array()){ ?>
+      <form action="addCarrinho.php" method="GET">
+          <tr>
+            <td>
+              <?php echo $dados['codigoBarra']?>
+              <input type="hidden" name="codigoBarra" value="<?php echo $dados['codigoBarra']?>">
+              
+            </td>  
+            <td><?php echo $dados['marca']?></td>
+            <td>R$<?php echo $dados['valor']?></td>
+            <td>
+            
+            <input type="number" id="quantidade" name="quantidade" min="1" max="<?php echo $dados['quantidade'] ?>">
+          
+            </td>
+            <td>
+              <button>comprar</button>
+              <a href="addCarrinho.php?codigoBarra=<?php echo $dados['codigoBarra'] ?>"></a> 
+            </td>
+          </tr>
+        
+      <?php }} ?>
+      </form>
   </tbody>
 </table>
 
@@ -68,9 +78,10 @@
   <table class="table table-striped">
   <thead>
     <tr> 
+      <th scope="col">Código</th>
       <th scope="col">Produto</th>
       <th scope="col">Preço</th>
-      <th scope="col">Código</th>
+      <th scope="col">Quantidade</th>
       <th scope="col"></th>
     </tr>
   </thead>
@@ -80,9 +91,10 @@
     $query = $mysqli->query($sql);
     while ($dados = $query->fetch_array()){ ?>
       <tr>
+        <td><?php echo $dados['codigoBarra']?></td>
         <td><?php echo $dados['marca']?></td>
         <td>R$<?php echo $dados['valor']?></td>
-        <td><?php echo $dados['codigoBarra']?></td>
+        <td><?php echo $dados['quantidade']?></td>
         <td>
           <a href="removerCarrinho.php?codigoBarra=<?php echo $dados['codigoBarra'] ?>">remover</a> 
         </td>
