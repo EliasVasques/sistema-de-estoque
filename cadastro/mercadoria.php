@@ -61,6 +61,13 @@
     </div>
   </div>
 
+  <div class="form-row">  
+    <div class="form-group col-md-12">
+      <label for="codigoBarra">Código de barra</label>
+      <input type="text" name="codigoBarra"  id="codigoBarra" class="form-control">
+    </div>
+  </div>
+
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 

@@ -41,7 +41,6 @@
         </div>
         </div>
     </a>
-    
 </div>
 
 <?php require '../componentes/footer.php' ?>

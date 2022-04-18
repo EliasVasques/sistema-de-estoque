@@ -81,10 +81,6 @@ footer div {
 }
 
 /* compra e venda */
-.remover{
-    width: 30px;
-    cursor: pointer;
-}
 .barra {
     width: 650px;
     margin: auto;
@@ -133,14 +129,8 @@ footer div {
 .buscar-produto div input {
     width: 500px;
 }
-.produtos {
-    margin: auto;
-}
-.produtos tr {
-    margin-top: 5px;
-}
-.produtos tr td {
-    margin-left: 20px;
+.limpar-busca {
+    text-align: center;
 }
 
 /* naoEstaClicado */
@@ -193,8 +183,11 @@ footer div {
     .voltar {
         margin-left: 0;
     }
-    #grafico, form, .barra, .desenvolvedor p, .table, #buscar-mercadoria, .card, #login-form, .buscar-produto div input {
+    #grafico, form, .barra, .desenvolvedor p, .table, #buscar-mercadoria, .card, #login-form  {
         width: 100%;
+    }
+    .buscar-produto div input {
+        width: 300px;
     }
     .card {
         margin: 0;
@@ -212,5 +205,13 @@ footer div {
     #login-form {
         border-radius: 0;
     }
+}
+@media(max-width: 350px) {
+    .buscar-produto div input {
+        width: 100%;
+    }
+    .busca-mercadoria thead {
+        display: none;
+    } 
 }
 

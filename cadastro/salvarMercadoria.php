@@ -9,9 +9,10 @@ if (!empty($_POST)){
     $marca = $_POST['marca'];
     $quantidade = $_POST['quantidade'];
     $codigoFornecedor = $_POST['codigoFornecedor'];
+    $codigoBarra = $_POST['codigoBarra'];
 
-    $sql = "INSERT INTO cadastro_mercadoria (valor, tipoProduto, marca, quantidade, codigoFornecedor)
-    values ('$valor', '$tipoProduto', '$marca', '$quantidade', '$codigoFornecedor')";
+    $sql = "INSERT INTO cadastro_mercadoria (valor, tipoProduto, marca, quantidade, codigoFornecedor, codigoBarra)
+    values ('$valor', '$tipoProduto', '$marca', '$quantidade', '$codigoFornecedor', '$codigoBarra')";
     $query = $mysqli->query($sql);
     
     if($query){ ?>

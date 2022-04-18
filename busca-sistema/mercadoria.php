@@ -24,7 +24,7 @@
   </span>
 </div>
 
-<table class="table table-striped">
+<table class="table table-striped busca-mercadoria">
   <thead>
     <tr>
       <th scope="col">Produto</th>

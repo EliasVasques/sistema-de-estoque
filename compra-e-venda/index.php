@@ -9,55 +9,19 @@
   //$removerBanco = [];
 ?>
 
-<!--
-<table class="table table-striped">
-  <thead>
-    <tr> 
-      <th scope="col">Produto</th>
-      <th scope="col">Preço</th>
-      <th scope="col">Código</th>
-      <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Coca</td>
-      <td>R$2.99</td>
-      <td>999999999999</td>
-      <th scope="row">
-          <img class="remover" src="../img/delete.jpg" alt="">
-      </th>
-    </tr>
-    <tr>
-      <td>Coca</td>
-      <td>R$2.99</td>
-      <td>999999999999</td>
-      <th scope="row">
-          <img class="remover" src="../img/delete.jpg" alt="">
-      </th>
-    </tr>
-    <tr>
-      <td>Coca</td>
-      <td>R$2.99</td>
-      <td>999999999999</td>
-      <th scope="row">
-          <img class="remover" src="../img/delete.jpg" alt="">
-      </th>
-    </tr>
-  </tbody>
-</table>
--->
-
 <h2>Compra</h2>
 
-<form class="buscar-produto"  method="POST">
+<form class="buscar-produto"  method="GET">
   <div>
-    <input type="search" class="form-control" />
+    <input type="search" name="busca" class="form-control" />
   </div>
-  <button type="button" class="btn btn-dark">
+  <button type="submit" class="btn btn-dark">
     <i class="fas fa-search"></i>
   </button>
 </form>
+<a href="index.php">
+  <p class="limpar-busca">limpar busca</p>
+</a>
 
 <table class="table table-striped busca">
   <thead>
@@ -65,6 +29,7 @@
       <th scope="col">Produto</th>
       <th scope="col">Preço</th>
       <th scope="col">Código</th>
+      <th></th>
     </tr>
   </thead>
 
@@ -73,19 +38,24 @@
 
     include "../banco/config.php";
 
-    if (!empty($_POST)){
-      $busca = $_POST['busca'];
-      $sql = "SELECT * FROM cadastro_mercadoria WHERE idProduto = $busca";
+    if (!empty($_GET)){
+      $busca = $_GET['busca'];
+      $sql = "SELECT * FROM cadastro_mercadoria WHERE codigoBarra = $busca";
     } else {
       $sql = "SELECT * FROM cadastro_mercadoria";
     }
     $query = $mysqli->query($sql);
+
     while ($dados = $query->fetch_array()){ ?>
-      <tr onclick="addCompra('<?php echo $dados['marca'] ?>', <?php echo $dados['valor'] ?>, '<?php echo $dados['idProduto'] ?>')">
-        <td><?php echo $dados['marca']?></td>
-        <td>R$<?php echo $dados['valor']?></td>
-        <td><?php echo $dados['idProduto']?></td>
-      </tr>
+        <tr>
+          <td><?php echo $dados['marca']?></td>
+          <td>R$<?php echo $dados['valor']?></td>
+          <td><?php echo $dados['codigoBarra']?></td>
+          <td>
+            <a href="addCarrinho.php?codigoBarra=<?php echo $dados['codigoBarra'] ?>">comprar</a> 
+          </td>
+        </tr>
+      
     <?php } ?>
   </tbody>
 </table>
@@ -104,6 +74,19 @@
     </tr>
   </thead>
   <tbody>
+  <?php
+    $sql = "SELECT * FROM carrinho";
+    $query = $mysqli->query($sql);
+    while ($dados = $query->fetch_array()){ ?>
+      <tr>
+        <td><?php echo $dados['marca']?></td>
+        <td>R$<?php echo $dados['valor']?></td>
+        <td><?php echo $dados['codigoBarra']?></td>
+        <td>
+          <a href="removerCarrinho.php?codigoBarra=<?php echo $dados['codigoBarra'] ?>">remover</a> 
+        </td>
+      </tr>
+    <?php } ?>
   </tbody>
   </table>
 </div>
@@ -112,11 +95,20 @@
 
 <div class="total">
   <div>Total</div>
-  <div class="valor">0</div>
+  <?php
+    $sql = "SELECT SUM(valor) FROM carrinho";
+    $query = $mysqli->query($sql);
+  ?>
+  <div class="valor">
+    <?php echo $query->fetch_array()[0]; ?>
+  </div>
 </div>
 
-<div id="finalizarCompra" onclick="mensagemRemovidoBancoComSucesso()">Finalizar Compra</div> 
-<!-- fazer que ao clicar remove do banco os ítens(usa php), passando removerBanco array como parametro, o array contem o id dos itens -->
+<a href="finalizarCompra.php">
+  <div id="finalizarCompra">
+    Finalizar Compra
+  </div> 
+</a>
 
 <script src="compra.js"></script>
 
