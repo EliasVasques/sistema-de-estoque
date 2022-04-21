@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 18-Abr-2022 às 21:37
+-- Tempo de geração: 22-Abr-2022 às 01:52
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.2
 
@@ -31,18 +31,18 @@ CREATE TABLE `cadastro_mercadoria` (
   `codigoBarra` int(13) NOT NULL,
   `tipoProduto` varchar(25) COLLATE utf8mb4_unicode_ci NOT NULL,
   `marca` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `quantidade` int(11) NOT NULL,
+  `quantidadeEstoque` int(11) NOT NULL,
   `codigoFornecedor` int(11) NOT NULL,
-  `valor` int(11) NOT NULL
+  `valor` int(11) NOT NULL,
+  `quantidadeCarrinho` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Extraindo dados da tabela `cadastro_mercadoria`
 --
 
-INSERT INTO `cadastro_mercadoria` (`codigoBarra`, `tipoProduto`, `marca`, `quantidade`, `codigoFornecedor`, `valor`) VALUES
-(0, 'Vodka', 'Calsberg Group', 5, 123, 55),
-(5, '', '', 0, 0, 10);
+INSERT INTO `cadastro_mercadoria` (`codigoBarra`, `tipoProduto`, `marca`, `quantidadeEstoque`, `codigoFornecedor`, `valor`, `quantidadeCarrinho`) VALUES
+(44230000, 'Cachaça', 'Calsberg Group', 0, 44230000, 55, 2);
 
 --
 -- Índices para tabelas despejadas
