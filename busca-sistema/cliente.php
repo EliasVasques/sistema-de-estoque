@@ -5,8 +5,8 @@
   require '../componentes/botao-voltar-home.php';
 ?>
 
-<h1> <i>Busca</i> </h1>
 
+<h2>Busca</h2>
 
 <?php require '../componentes/menu.php' ?>
 

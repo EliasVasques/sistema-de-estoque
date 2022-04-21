@@ -14,7 +14,7 @@
   document.querySelector('#cliente .card').classList.add("naoEstaClicado");
 </script>
 
-<h1> <i>Busca</i> </h1>
+<h2 id="titulo">Fornecedores</h2>
 
 <div class="input-group rounded" id="buscar-mercadoria">
   <input type="search" class="form-control rounded" 

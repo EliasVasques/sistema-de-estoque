@@ -11,8 +11,7 @@
   document.querySelector('.navbar-administracao').classList.add("clicado");
 </script>
 
-
-<h1> <i>Entradas e saídas</i> </h1>
+<h2 class="titulo">Entradas e saídas</h2>
 
 <table class="table table-striped">
   <thead>

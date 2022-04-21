@@ -1,7 +1,6 @@
 <?php require '../componentes/head.php' ?>
 
 <body>
-
 <?php
 if (!empty($_POST)){
     include "../banco/config.php";
@@ -10,10 +9,9 @@ if (!empty($_POST)){
     $marca = $_POST['marca'];
     $quantidade = $_POST['quantidade'];
     $codigoFornecedor = $_POST['codigoFornecedor'];
-    $codigoBarra = $_POST['codigoBarra'];
 
-    $sql = "INSERT INTO cadastro_mercadoria (valor, tipoProduto, marca, quantidade, codigoFornecedor, codigoBarra)
-    values ('$valor', '$tipoProduto', '$marca', '$quantidade', '$codigoFornecedor', '$codigoBarra')";
+    $sql = "INSERT INTO cadastro_mercadoria (valor, tipoProduto, marca, quantidade, codigoFornecedor)
+    values ('$valor', '$tipoProduto', '$marca', '$quantidade', '$codigoFornecedor')";
     $query = $mysqli->query($sql);
     
     if($query){ ?>

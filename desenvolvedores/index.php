@@ -10,7 +10,7 @@
   document.querySelector('.navbar-desenvolvedores').classList.add("clicado");
 </script>
 
-<h1> <i>Desenvolvedores</i> </h1>
+<h2>Desenvolvedores</h2>
 
 <div class="desenvolvedor">
     <img src="../img/Elias.jpg" class="desenvolvedor-foto" alt="">

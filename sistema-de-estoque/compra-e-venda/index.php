@@ -11,7 +11,7 @@
 
 <h2>Compra</h2>
 
-<form action="busca.php" method="POST" >
+<form method="POST" >
     <input type="search" class="form-control rounded" 
     id="campo-pesquisa" name="busca" placeholder="Digite o código do produto" aria-label="Search" aria-describedby="search-addon" />
 
@@ -28,32 +28,26 @@
       <th scope="col">Código</th>
     </tr>
   </thead>
+
   <tbody>
-    <tr onclick="addCompra('Soda', 2.88, '1112638321')">
-      <td>Soda</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-    </tr>
-    <tr onclick="addCompra('Refri', 2.88, '1112638321')">
-      <td>Refri</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-    </tr>
-    <tr onclick="addCompra('Suquinho', 2.88, '1112638321')">
-      <td>Suquinho</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-    </tr>
-    <tr onclick="addCompra('Chá', 2.88, '1112638321')"> 
-      <td>Chá</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-    </tr>
-    <tr onclick="addCompra('Cerveja Amanteigada', 2.88, '1112638321')">
-      <td>Cerveja Amanteigada</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-    </tr>
+  <?php
+
+    include "../banco/config.php";
+
+    if (!empty($_POST)){
+      $busca = $_POST['busca'];
+      $sql = "SELECT * FROM cadastro_mercadoria WHERE idProduto = $busca";
+    } else {
+      $sql = "SELECT * FROM cadastro_mercadoria";
+    }
+    $query = $mysqli->query($sql);
+    while ($dados = $query->fetch_array()){ ?>
+      <tr onclick="addCompra('<?php echo $dados['marca'] ?>', <?php echo $dados['valor'] ?>, '<?php echo $dados['idProduto'] ?>')">
+        <td><?php echo $dados['marca']?></td>
+        <td>R$<?php echo $dados['valor']?></td>
+        <td><?php echo $dados['idProduto']?></td>
+      </tr>
+    <?php } ?>
   </tbody>
 </table>
 

@@ -4,27 +4,14 @@ body  {
     font-family: 'Open Sans', sans-serif;
 }
 
-h1 {
-    margin: 50px;
-    text-align: center;
-    color: #212529;
+a {
+    text-decoration: none;
 }
 
 h2 {
     text-align: center;
     margin: 30px;
 }
-
-h3 {
-    text-align: center;
-    margin-top: 20px;
-}
-
-a {
-    text-decoration: none;
-}
-
-
 
 form, .table, #buscar-mercadoria, #grafico {
     width: 500px;
@@ -114,6 +101,10 @@ footer div {
    text-align: center;
    font-size: 20px;
 }
+#itens h3 {
+    text-align: center;
+    margin-top: 20px;
+}
 .busca tr {
     cursor: pointer;
 }
@@ -131,15 +122,8 @@ footer div {
     margin: auto;
     margin-top: 20px;
 }
-.buscar-produto {
-    display: flex;
-    justify-content: center;
-}
-.buscar-produto div input {
-    width: 500px;
-}
-.limpar-busca {
-    text-align: center;
+#finalizarCompra {
+
 }
 
 /* naoEstaClicado */
@@ -195,9 +179,6 @@ footer div {
     #grafico, form, .barra, .desenvolvedor p, .table, #buscar-mercadoria, .card, #login-form  {
         width: 100%;
     }
-    .buscar-produto div input {
-        width: 300px;
-    }
     .card {
         margin: 0;
         margin-top: 10px;
@@ -214,13 +195,5 @@ footer div {
     #login-form {
         border-radius: 0;
     }
-}
-@media(max-width: 350px) {
-    .buscar-produto div input {
-        width: 100%;
-    }
-    .busca-mercadoria thead {
-        display: none;
-    } 
 }
 
