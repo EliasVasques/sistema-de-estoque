@@ -1,33 +1,37 @@
 <?php require '../componentes/head.php' ?>
- var_dump($_GET);
 <body>
+
+
 <?php 
+
 if (!empty($_GET)){
     include "../banco/config.php";
+   
+    $quantidadeCliente = $_GET['quantidadeCliente'];
     $codigoBarra = $_GET['codigoBarra'];
-    $quantidade = $_GET['quantidade'];
 
-    // ADD CARRINHO 
-    $sql = "SELECT * FROM cadastro_mercadoria WHERE codigoBarra = $codigoBarra";
-    $query = $mysqli->query($sql);
-    $dados = $query->fetch_array();
-    
-    $valor = $dados['valor'];
-    $tipoProduto = $dados['tipoProduto'];
-    $marca = $dados['marca'];
-    $quantidade = $dados['quantidade'];
-    $codigoFornecedor = $dados['codigoFornecedor'];
+    $selecionaMercadoria = "SELECT * FROM cadastro_mercadoria WHERE codigoBarra = $codigoBarra";
+    $selecionaMercadoriaQuery = $mysqli->query($selecionaMercadoria);
+    $dadosMercadoria = $selecionaMercadoriaQuery->fetch_array();
 
-    $sql = "INSERT INTO carrinho (valor, tipoProduto, marca, quantidade, codigoFornecedor, codigoBarra)
-    values ('$valor', '$tipoProduto', '$marca', '$quantidade', '$codigoFornecedor', '$codigoBarra')";
-    $query = $mysqli->query($sql);
 
-    // REMOVER CADASTRO_MERCADORIA
-    $sql = "DELETE FROM cadastro_mercadoria WHERE codigoBarra = $codigoBarra";
-    $query = $mysqli->query($sql);
+    $valor = $dadosMercadoria['valor'];
+    $tipoProduto = $dadosMercadoria['tipoProduto'];
+    $marca = $dadosMercadoria['marca'];
+    $quantidadeEstoque = $dadosMercadoria['quantidadeEstoque'];
+    $quantidadeCarrinho = $dadosMercadoria['quantidadeCarrinho'];
+    $codigoFornecedor = $dadosMercadoria['codigoFornecedor'];
+
+    $novoQuantidadeEstoque = $quantidadeEstoque - $quantidadeCliente;
+    $novoQuantidadeCarrinho= $quantidadeCliente + $quantidadeCarrinho;
+    $queryUpdate = "UPDATE cadastro_mercadoria
+    SET quantidadeEstoque = $novoQuantidadeEstoque, 
+        quantidadeCarrinho = $novoQuantidadeCarrinho
+    WHERE codigoBarra = $codigoBarra";
+    $updateQueryExecutada = $mysqli->query($queryUpdate);
 
     header('Location: '.'index.php');
 
 
-} */ ?>
+} ?>
 </body>

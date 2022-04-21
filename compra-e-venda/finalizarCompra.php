@@ -3,10 +3,16 @@
 require '../componentes/head.php';
 include "../banco/config.php";
 
-$sql = "DELETE FROM carrinho";
-$query = $mysqli->query($sql);
+$zerarCarrinhoQuery = "UPDATE cadastro_mercadoria
+SET quantidadeCarrinho = 0
+WHERE quantidadeCarrinho <> 0";
+$zerarCarrinhoQueryExecutada = $mysqli->query($zerarCarrinhoQuery);
 
-if($query) { ?>
+$excluirSemItensQuery = "DELETE FROM cadastro_mercadoria WHERE quantidadeEstoque = '0' AND quantidadeCarrinho = '0'";
+$excluirSemItensQueryExecutada = $mysqli->query($excluirSemItensQuery);
+
+
+if($zerarCarrinhoQuery) { ?>
     <script>
             swal({
             title: "Compra efetuada com sucesso!",

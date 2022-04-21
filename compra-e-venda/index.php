@@ -9,60 +9,94 @@
   //$removerBanco = [];
 ?>
 
-<h2>Compra</h2>
+<h1> <i>Compra</i> </h2>
 
-<form action="busca.php" method="POST" >
-    <input type="search" class="form-control rounded" 
-    id="campo-pesquisa" name="busca" placeholder="Digite o código do produto" aria-label="Search" aria-describedby="search-addon" />
-
-    <button class="input-group-text border-0" id="search-addon">
-      <i class="fas fa-search"></i>
-    </button>
+<h3>Pesquise, temos de tudo!</h3>
+<form class="buscar-produto"  method="GET">
+  <div>
+    <input type="search" name="busca" class="form-control" />
+  </div>
+  <button type="submit" class="btn btn-dark">
+    <i class="fas fa-search"></i>
+  </button>
 </form>
+<a href="index.php">
+  <p class="limpar-busca">limpar busca</p>
+</a>
 
 <table class="table table-striped busca">
   <thead>
     <tr>
+      <th scope="col">Código</th>  
       <th scope="col">Produto</th>
       <th scope="col">Preço</th>
-      <th scope="col">Código</th>
+      <th scope="col">Quantidade</th>
+      <th></th>
     </tr>
   </thead>
+
   <tbody>
-    <tr onclick="addCompra('Soda', 2.88, '1112638321')">
-      <td>Soda</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-    </tr>
-    <tr onclick="addCompra('Refri', 2.88, '1112638321')">
-      <td>Refri</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-    </tr>
-    <tr onclick="addCompra('Suquinho', 2.88, '1112638321')">
-      <td>Suquinho</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-    </tr>
-    <tr onclick="addCompra('Chá', 2.88, '1112638321')"> 
-      <td>Chá</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-    </tr>
-    <tr onclick="addCompra('Cerveja Amanteigada', 2.88, '1112638321')">
-      <td>Cerveja Amanteigada</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-    </tr>
+  <?php
+
+    include "../banco/config.php";
+
+    if (!empty($_GET)){
+      $pesquisa = $_GET['busca'];
+      if(is_numeric($pesquisa)) { // não dá erro com string
+        $busca = "SELECT * FROM cadastro_mercadoria WHERE codigoBarra = $pesquisa";
+        $query = $mysqli->query($busca);
+        $dados = $query->fetch_array();
+        if(!empty($dados)) { // não dá erro se não envontrar
+      ?>
+        <form action="addCarrinho.php" method="GET">
+            <tr>
+              <input type="hidden" name="codigoBarra" value="<?php echo $dados['codigoBarra']?>">
+              <td>
+                <?php echo $dados['codigoBarra'] ?>
+              </td>  
+              <td><?php echo $dados['marca']?></td>
+              <td>R$<?php echo $dados['valor']?></td>
+              <td>
+                <input type="number" id="quantidadeCliente" name="quantidadeCliente" min="1" max="<?php echo $dados['quantidadeEstoque'] ?>">
+              </td>
+              <td>
+                <button>comprar</button>
+              </td>
+            </tr>
+      <?php }}} ?>
+      </form>
   </tbody>
 </table>
 
 <hr class="barra">
 
 <div id="itens">
-  <h3>Itens</h2>
+  <h3>Seu carrinho</h2>
   <table class="table table-striped">
+  <thead>
+    <tr> 
+      <th scope="col">Código</th>
+      <th scope="col">Produto</th>
+      <th scope="col">Preço</th>
+      <th scope="col">Quantidade</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
   <tbody>
+  <?php
+    $todosTemCarrinho = "SELECT * FROM cadastro_mercadoria WHERE quantidadeCarrinho <> 0";
+    $todosTemCarrinhoQuery = $mysqli->query($todosTemCarrinho);
+    while ($dados = $todosTemCarrinhoQuery->fetch_array()){ ?>
+      <tr>
+        <td><?php echo $dados['codigoBarra']?></td>
+        <td><?php echo $dados['marca']?></td>
+        <td>R$<?php echo $dados['valor']?></td>
+        <td><?php echo $dados['quantidadeCarrinho']?></td>
+        <td>
+          <a href="removerCarrinho.php?codigoBarra=<?php echo $dados['codigoBarra'] ?>">remover</a> 
+        </td>
+      </tr>
+    <?php } ?>
   </tbody>
   </table>
 </div>
@@ -71,11 +105,20 @@
 
 <div class="total">
   <div>Total</div>
-  <div class="valor">0</div>
+  <?php
+    $sql = "SELECT SUM(quantidadeCarrinho * valor) FROM cadastro_mercadoria";
+    $query = $mysqli->query($sql);
+  ?>
+  <div class="valor">
+    <?php echo $query->fetch_array()[0]; ?>
+  </div>
 </div>
 
-<div id="finalizarCompra" onclick="mensagemRemovidoBancoComSucesso()">Finalizar Compra</div> 
-<!-- fazer que ao clicar remove do banco os ítens(usa php), passando removerBanco array como parametro, o array contem o id dos itens -->
+<a href="finalizarCompra.php">
+  <div id="finalizarCompra">
+    Finalizar Compra
+  </div> 
+</a>
 
 <script src="compra.js"></script>
 

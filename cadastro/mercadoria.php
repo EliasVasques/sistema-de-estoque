@@ -5,7 +5,7 @@
   require '../componentes/botao-voltar-home.php';
 ?>
 
-<h2>Busca</h2>
+<h1> <i>Cadastro</i> </h1>
 
 <?php require '../componentes/menu.php' ?>
 <script>
@@ -50,7 +50,7 @@
   <div class="form-row">  
     <div class="form-group col-md-12">
       <label for="quantidade">Quantidade</label>
-      <input type="text" name="quantidade" class="form-control" id="quantidade">
+      <input type="text" name="quantidadeEstoque" class="form-control" id="quantidade">
     </div>
   </div>
 
@@ -58,6 +58,13 @@
     <div class="form-group col-md-12">
       <label for="codigoFornecedor">Código do fornecedor</label>
       <input type="text" name="codigoFornecedor"  id="codigoFornecedor" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-row">  
+    <div class="form-group col-md-12">
+      <label for="codigoBarra">Código de barra</label>
+      <input type="text" name="codigoBarra"  id="codigoBarra" class="form-control">
     </div>
   </div>
 

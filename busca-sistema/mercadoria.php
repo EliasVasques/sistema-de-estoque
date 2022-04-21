@@ -6,7 +6,7 @@
 ?>
 
 
-<h2>Busca</h2>
+<h1> <i>Busca</i> </h1>
 
 <?php require '../componentes/menu.php' ?>
 <script>
@@ -24,7 +24,7 @@
   </span>
 </div>
 
-<table class="table table-striped">
+<table class="table table-striped busca-mercadoria">
   <thead>
     <tr>
       <th scope="col">Produto</th>

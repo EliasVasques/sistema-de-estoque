@@ -8,7 +8,7 @@
   document.querySelector('.navbar-home').classList.add("clicado");
 </script>
 
-<h2>Sistema de Gerenciamento</h2>
+<h1> <i>Sistema de Gerenciamento</i> </h1>
 
 <div class="cards">
     <a href="../cadastro/mercadoria.php">
@@ -41,7 +41,6 @@
         </div>
         </div>
     </a>
-    
 </div>
 
 <?php require '../componentes/footer.php' ?>
