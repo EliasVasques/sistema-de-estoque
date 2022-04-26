@@ -27,12 +27,12 @@ a {
 
 
 form, .table, #buscar-mercadoria, #grafico {
-    width: 500px;
+    width: 1000px;
     margin: auto;
 }
 
 form div, form button, #buscar-mercadoria {
-    margin-top: 20px;
+    margin-top: 3px;
 }
 
 /* tela login */
@@ -69,8 +69,8 @@ footer div {
     justify-content: center;
     align-items: center;
 
-    margin-top: 50px;
-    height: 150px;      
+    margin-top: 193px;
+    height: 150px;     
 }
 
 /* navbar */
@@ -80,6 +80,8 @@ footer div {
 
 /* home */
 .cards {
+    /*margin-top: 100px;*/
+    /*margin-bottom: 143px;*/
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

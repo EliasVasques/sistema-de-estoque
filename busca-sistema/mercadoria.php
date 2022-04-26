@@ -16,85 +16,67 @@
 
 <h2 id="titulo">Mercadorias</h2>
 
+<form class="buscar-mercadoria"  method="GET">
 <div class="input-group rounded" id="buscar-mercadoria">
-  <input type="search" class="form-control rounded" 
-  id="campo-pesquisa" placeholder="Digite o código do produto" aria-label="Search" aria-describedby="search-addon" />
-  <span class="input-group-text border-0" id="search-addon">
+  <input type="search" name="busca" class="form-control rounded" 
+  id="campo-pesquisa" placeholder="Digite o código de barras" aria-label="Search" aria-describedby="search-addon" />
+  <button type="submit" class="input-group-text border-0" id="search-addon">
     <i class="fas fa-search"></i>
   </span>
 </div>
+</form>
 
-<table class="table table-striped busca-mercadoria">
+<a href="mercadoria.php">
+  <p class="limpar-busca">limpar busca</p>
+</a>
+
+  <tbody>
+<?php
+
+    include "../banco/config.php";
+    $pesquisa = null;
+    if (!empty($_GET)){
+      $pesquisa = $_GET['busca'];
+      if(is_numeric($pesquisa)) { // não dá erro com string
+        $busca = "SELECT * FROM cadastro_mercadoria WHERE codigoBarra = '{$pesquisa}'";
+        $query = $mysqli->query($busca);
+        $dados = $query->fetch_array();
+        if(!empty($dados)) { // não dá erro se não envontrar
+      ?>
+      <?php }}} ?>
+  </tbody>
+</table>
+
+<div id="itens">
+  <h3>Resultado da busca</h2>
+  <table class="table table-striped">
   <thead>
-    <tr>
-      <th scope="col">Produto</th>
-      <th scope="col">Preço</th>
-      <th scope="col">Código</th>
-      <th scope="col">Quantidade</th>
+    <tr> 
+      <th scope="col">Código de Barra </th>  
+      <th scope="col">Tipo dp Produto</th>  
+      <th scope="col">Marca</th>
+      <th scope="col">Quantidade em Estoque</th>
+      <th scope="col">Valor</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Soda</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-      <td>500</td>
-    </tr>
-    <tr>
-      <td>Soda</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-      <td>500</td>
-    </tr>
-    <tr>
-      <td>Soda</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-      <td>500</td>
-    </tr>
-    <tr>
-      <td>Soda</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-      <td>500</td>
-    </tr>
-    <tr>
-      <td>Soda</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-      <td>500</td>
-    </tr>
-    <tr>
-      <td>Soda</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-      <td>500</td>
-    </tr>
-    <tr>
-      <td>Soda</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-      <td>500</td>
-    </tr>
-    <tr>
-      <td>Soda</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-      <td>500</td>
-    </tr>
-    <tr>
-      <td>Soda</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-      <td>500</td>
-    </tr>
-    <tr>
-      <td>Soda</td>
-      <td>R$2.88</td>
-      <td>1112638321</td>
-      <td>500</td>
-    </tr>
+  <?php
+    $buscaMercadoria = "SELECT * FROM cadastro_mercadoria WHERE codigoBarra = '{$pesquisa}'";
+    $buscaMercadoriaQuery = $mysqli->query($buscaMercadoria);
+    while ($dados = $buscaMercadoriaQuery->fetch_array()){ ?>
+      <tr>
+        <td><?php echo $dados['codigoBarra']?></td>
+        <td><?php echo $dados['tipoProduto']?></td>
+        <td><?php echo $dados['marca']?></td>
+        <td><?php echo $dados['quantidadeEstoque']?></td>
+        <td><?php echo $dados['valor']?></td>
+      </tr>
+    <?php } ?>
   </tbody>
-</table>
+  </table>
+</div>
+
+<?php require '../componentes/footer.php' ?>
 
 <?php require '../componentes/footer.php' ?>

@@ -1,5 +1,3 @@
-
-        
         <footer>
             <div>
                 <i>Elias Vasques</i> 

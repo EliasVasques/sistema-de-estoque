@@ -8,7 +8,7 @@
   document.querySelector('.navbar-home').classList.add("clicado");
 </script>
 
-<h1> <i>Sistema de Gerenciamento</i> </h1>
+<h1> <i>O que você deseja fazer?</i> </h1>
 
 <div class="cards">
     <a href="../cadastro/mercadoria.php">
