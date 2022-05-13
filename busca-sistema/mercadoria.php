@@ -71,12 +71,12 @@
         <td><?php echo $dados['marca']?></td>
         <td><?php echo $dados['quantidadeEstoque']?></td>
         <td><?php echo $dados['valor']?></td>
+        <td><button type="button" class="btn btn-primary justify-content-end">Editar</button></td>
+        
       </tr>
     <?php } ?>
   </tbody>
   </table>
 </div>
-
-<?php require '../componentes/footer.php' ?>
 
 <?php require '../componentes/footer.php' ?>

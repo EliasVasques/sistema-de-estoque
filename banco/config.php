@@ -2,7 +2,7 @@
 $servidor = 'localhost';
 $usuario = 'root';
 $senha = '';
-$banco = 'tcc';
+$banco = 'organize';
 
 //Instanciamos a classe para acessar o banco
 $mysqli = new mysqli($servidor, $usuario, $senha, $banco);

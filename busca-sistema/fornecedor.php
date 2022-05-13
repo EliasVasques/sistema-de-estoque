@@ -75,6 +75,7 @@
         <td><?php echo $dados['representante']?></td>
         <td><?php echo $dados['telefone']?></td>
         <td><?php echo $dados['email']?></td>
+        <td><button type="button" class="btn btn-primary justify-content-end">Editar</button></td>
       </tr>
     <?php } ?>
   </tbody>

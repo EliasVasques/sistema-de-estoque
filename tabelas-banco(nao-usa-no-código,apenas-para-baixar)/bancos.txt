@@ -1,0 +1,125 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.3
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Tempo de geração: 14-Maio-2022 às 01:56
+-- Versão do servidor: 10.4.24-MariaDB
+-- versão do PHP: 8.1.5
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+--
+-- Banco de dados: `organize`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `cadastro_cliente`
+--
+
+CREATE TABLE `cadastro_cliente` (
+  `idCliente` int(11) NOT NULL,
+  `nome` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `CPF` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `endereco` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `UF` varchar(2) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cidade` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `CEP` varchar(8) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `telefone` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `cadastro_fornecedor`
+--
+
+CREATE TABLE `cadastro_fornecedor` (
+  `idFornecedor` int(10) NOT NULL,
+  `nomeFantasia` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `razaoSocial` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `CNPJ` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `endereco` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `UF` varchar(2) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cidade` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `CEP` varchar(8) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `representante` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `telefone` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Extraindo dados da tabela `cadastro_fornecedor`
+--
+
+INSERT INTO `cadastro_fornecedor` (`idFornecedor`, `nomeFantasia`, `razaoSocial`, `CNPJ`, `endereco`, `UF`, `cidade`, `CEP`, `representante`, `telefone`, `email`) VALUES
+(1, 'Teste', 'Teste', '00000000000', 'Teste', 'BA', 'Teste', '00000000', 'Teste', '00000000000', 'teste@teste.com');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `cadastro_mercadoria`
+--
+
+CREATE TABLE `cadastro_mercadoria` (
+  `codigoBarra` varchar(13) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tipoProduto` varchar(25) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `marca` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `quantidadeEstoque` int(11) NOT NULL,
+  `codigoFornecedor` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `valor` int(11) NOT NULL,
+  `quantidadeCarrinho` int(11) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Extraindo dados da tabela `cadastro_mercadoria`
+--
+
+INSERT INTO `cadastro_mercadoria` (`codigoBarra`, `tipoProduto`, `marca`, `quantidadeEstoque`, `codigoFornecedor`, `valor`, `quantidadeCarrinho`) VALUES
+('0', 'Cerveja', 'Calsberg Group', 14, '000000', 20, 0),
+('00000', 'Cerveja', 'Cuca BGI', 10, '000000', 45, 0),
+('4785', 'Cerveja', 'Skol', 20, '4859785', 10, 0);
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices para tabela `cadastro_cliente`
+--
+ALTER TABLE `cadastro_cliente`
+  ADD PRIMARY KEY (`idCliente`);
+
+--
+-- Índices para tabela `cadastro_fornecedor`
+--
+ALTER TABLE `cadastro_fornecedor`
+  ADD PRIMARY KEY (`idFornecedor`);
+
+--
+-- Índices para tabela `cadastro_mercadoria`
+--
+ALTER TABLE `cadastro_mercadoria`
+  ADD PRIMARY KEY (`codigoBarra`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `cadastro_cliente`
+--
+ALTER TABLE `cadastro_cliente`
+  MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `cadastro_fornecedor`
+--
+ALTER TABLE `cadastro_fornecedor`
+  MODIFY `idFornecedor` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
